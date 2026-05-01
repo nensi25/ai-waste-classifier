@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Waste Classifier</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle">
+        🌙
+    </button>
+
+    <!-- Voice Assistant -->
+    <button id="voiceBtn">
+        🎤
+    </button>
+
+    <!-- Background Glow -->
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+
+    <div class="container">
+
+        <div class="glass-card">
+
+            <h1>♻️ AI Waste Classifier</h1>
+
+            <p class="subtitle">
+                Smart futuristic AI powered waste detection system
+            </p>
+
+            <form id="uploadForm">
+
+                <!-- Upload Box -->
+                <div class="upload-box" id="uploadBox">
+
+                    <input type="file"
+                           id="fileInput"
+                           name="image"
+                           accept="image/*"
+                           hidden>
+
+                    <div id="uploadContent">
+
+                        <div class="upload-icon">
+                            📸
+                        </div>
+
+                        <p class="upload-text">
+                            Click to Upload Image
+                        </p>
+
+                        <span class="upload-sub">
+                            PNG • JPG • WEBP
+                        </span>
+
+                    </div>
+
+                    <img id="previewImage">
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="button-group">
+
+                    <button type="button" id="cameraBtn">
+                        📷 Open Camera
+                    </button>
+
+                    <button type="submit" id="analyzeBtn">
+                        Analyze Waste
+                    </button>
+
+                </div>
+
+            </form>
+
+            <!-- Camera -->
+            <video id="camera" autoplay playsinline></video>
+
+            <canvas id="canvas"></canvas>
+
+            <!-- Result Box -->
+            <div class="result-box">
+
+                <h3>AI ANALYSIS RESULT</h3>
+
+                <!-- Loader -->
+                <div class="loader" id="loader"></div>
+
+                <!-- Result Text -->
+                <p id="resultText">
+                    Upload image for AI analysis...
+                </p>
+
+                <!-- Category -->
+                <div class="category-card" id="categoryCard">
+                    ♻️ Recyclable Waste
+                </div>
+
+                <!-- Confidence -->
+                <div class="confidence-box">
+
+                    <h4>AI Confidence</h4>
+
+                    <div class="progress-bar">
+
+                        <div class="progress" id="progress"></div>
+
+                    </div>
+
+                    <span id="confidenceText">
+                        92%
+                    </span>
+
+                </div>
+
+                <!-- Recycling Tips -->
+                <div class="tips-box">
+
+                    <h4>♻️ Recycling Suggestion</h4>
+
+                    <p id="tipsText">
+                        Dispose in recyclable waste bin.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
