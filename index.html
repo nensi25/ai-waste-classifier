@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Waste Classifier</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Particle Background -->
     <canvas id="particles"></canvas>
 
     <!-- Theme Toggle -->
-    <button id="themeToggle">
-        🌙
-    </button>
+    <button id="themeToggle">🌙</button>
 
     <!-- Voice Assistant -->
-    <button id="voiceBtn">
-        🎤
-    </button>
+    <button id="voiceBtn">🎤</button>
 
     <!-- Background Glow -->
     <div class="bg1"></div>
@@ -51,9 +50,7 @@
 
                     <div id="uploadContent">
 
-                        <div class="upload-icon">
-                            📸
-                        </div>
+                        <div class="upload-icon">📸</div>
 
                         <p class="upload-text">
                             Click to Upload Image
@@ -113,9 +110,7 @@
                     <h4>AI Confidence</h4>
 
                     <div class="progress-bar">
-
                         <div class="progress" id="progress"></div>
-
                     </div>
 
                     <span id="confidenceText">
@@ -141,7 +136,8 @@
 
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
