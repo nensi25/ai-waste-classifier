@@ -18,10 +18,6 @@ const tipsText = document.getElementById("tipsText");
 const themeToggle = document.getElementById("themeToggle");
 const voiceBtn = document.getElementById("voiceBtn");
 
-/* =========================
-   IMAGE UPLOAD
-========================= */
-
 uploadBox.addEventListener("click", () => {
 
     fileInput.click();
@@ -47,10 +43,6 @@ fileInput.addEventListener("change", () => {
     }
 
 });
-
-/* =========================
-   CAMERA
-========================= */
 
 cameraBtn.addEventListener("click", async()=>{
 
@@ -95,10 +87,6 @@ cameraBtn.addEventListener("click", async()=>{
 
 });
 
-/* =========================
-   FORM SUBMIT
-========================= */
-
 uploadForm.addEventListener("submit", async(e)=>{
 
     e.preventDefault();
@@ -110,8 +98,6 @@ uploadForm.addEventListener("submit", async(e)=>{
 
     const formData = new FormData();
 
-    /* FILE IMAGE */
-
     if(fileInput.files[0]){
 
         formData.append(
@@ -120,8 +106,6 @@ uploadForm.addEventListener("submit", async(e)=>{
         );
 
     }
-
-    /* CAMERA IMAGE */
 
     else{
 
@@ -155,8 +139,6 @@ uploadForm.addEventListener("submit", async(e)=>{
         resultText.innerHTML =
         `✅ ${data.prediction}`;
 
-        /* RANDOM CONFIDENCE */
-
         const randomConfidence =
         Math.floor(Math.random()*15)+85;
 
@@ -165,8 +147,6 @@ uploadForm.addEventListener("submit", async(e)=>{
 
         confidenceText.innerHTML =
         randomConfidence + "%";
-
-        /* RECYCLING TIPS */
 
         tipsText.innerHTML =
         "Please clean and separate waste before recycling for better processing.";
@@ -183,10 +163,6 @@ uploadForm.addEventListener("submit", async(e)=>{
     }
 
 });
-
-/* =========================
-   PARTICLES BACKGROUND
-========================= */
 
 const canvasParticles =
 document.getElementById("particles");
@@ -266,10 +242,6 @@ function animateParticles(){
 
 animateParticles();
 
-/* =========================
-   DARK / LIGHT MODE
-========================= */
-
 themeToggle.addEventListener("click",()=>{
 
     document.body.classList.toggle(
@@ -293,10 +265,6 @@ themeToggle.addEventListener("click",()=>{
 
 });
 
-/* =========================
-   VOICE ASSISTANT
-========================= */
-
 voiceBtn.addEventListener("click",()=>{
 
     const speech =
@@ -316,10 +284,6 @@ voiceBtn.addEventListener("click",()=>{
     );
 
 });
-
-/* =========================
-   WINDOW RESIZE
-========================= */
 
 window.addEventListener(
     "resize",
