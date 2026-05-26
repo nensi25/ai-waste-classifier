@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Waste Classifier</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Particle Background -->
     <canvas id="particles"></canvas>
 
-    <!-- Theme Toggle -->
     <button id="themeToggle">🌙</button>
 
-    <!-- Voice Assistant -->
     <button id="voiceBtn">🎤</button>
 
-    <!-- Background Glow -->
     <div class="bg1"></div>
     <div class="bg2"></div>
 
@@ -39,7 +33,6 @@
 
             <form id="uploadForm">
 
-                <!-- Upload Box -->
                 <div class="upload-box" id="uploadBox">
 
                     <input type="file"
@@ -66,7 +59,6 @@
 
                 </div>
 
-                <!-- Buttons -->
                 <div class="button-group">
 
                     <button type="button" id="cameraBtn">
@@ -81,30 +73,24 @@
 
             </form>
 
-            <!-- Camera -->
             <video id="camera" autoplay playsinline></video>
 
             <canvas id="canvas"></canvas>
 
-            <!-- Result Box -->
             <div class="result-box">
 
                 <h3>AI ANALYSIS RESULT</h3>
 
-                <!-- Loader -->
                 <div class="loader" id="loader"></div>
 
-                <!-- Result Text -->
                 <p id="resultText">
                     Upload image for AI analysis...
                 </p>
 
-                <!-- Category -->
                 <div class="category-card" id="categoryCard">
                     ♻️ Recyclable Waste
                 </div>
 
-                <!-- Confidence -->
                 <div class="confidence-box">
 
                     <h4>AI Confidence</h4>
@@ -119,7 +105,6 @@
 
                 </div>
 
-                <!-- Recycling Tips -->
                 <div class="tips-box">
 
                     <h4>♻️ Recycling Suggestion</h4>
@@ -136,7 +121,6 @@
 
     </div>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
